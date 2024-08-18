@@ -3,9 +3,11 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("Hello, World! ")
-    fmt.Println("Hello, z! ")
-    fmt.Println("Hello, A! ")
+    
 
-
+    myFunction("hello", "world", "foo", "bar")
+}
+func myFunction(arg1 string, args ...string) {
+    fmt.Println("Arg1:", arg1)
+    fmt.Println("Variadic args:", args)
 }
