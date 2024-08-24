@@ -51,7 +51,19 @@ func main(){
     fmt.Println(num)
     hello()
     
-loop()
+    loop()
+
+    // Go map
+    var mapA = map[string] int {"Age":21}
+    // var map3 map[string] int; declaring a map - default value is nil
+    var mapB = make(map[string] int)
+
+      mapB["Salary"] = 34000;
+
+
+    fmt.Println(mapA["Age"])
+    fmt.Println(mapB)
+    delete(mapB, "Salary")
 }
 
    func hello(){
