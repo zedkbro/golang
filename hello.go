@@ -13,11 +13,16 @@ func main(){
     fmt.Println(interns)
 
     // slice literal
-    var mySlice = [5] int {}
-    var mySlice2 = interns[0:2]
-
+    var mySlice = [3] int {1,2,3}
+    fmt.Println(mySlice)
+    // Q1. how is capacity calculated 
+    var mySlice2 = [] int {1, 2, 3, 4, 5, 6}
+    var makeSlice = make([]int , 4,10)
+     
+    // an array with defined length can't be a slice
+    fmt.Println(append(mySlice2, 4,5))
+    fmt.Println("Capacity of slice ",cap(makeSlice))
     fmt.Println(mySlice2)
-
     x := 3
 
     switch x {
