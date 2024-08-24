@@ -8,8 +8,8 @@ func main(){
     var firstName string = "Zinabu";
     var lastName = "Kalayu"
     fmt.Printf("%v\n", firstName)
-    fmt.Printf("%T\n ", lastName)
-    interns  := []string{"Zinabu", "Tsegay","Daniel"};
+    fmt.Printf("%T type \n", lastName)
+    interns:= []string{"Zinabu", "Tsegay","Daniel"};
     fmt.Println(interns)
     //  mySlice5 := append(interns, )
     // slice literal
@@ -25,8 +25,8 @@ func main(){
     fmt.Println(append(mySlice2, makeSlice...))
     fmt.Println("Capacity of slice ",cap(makeSlice))
     fmt.Println(mySlice2)
-    x := 3
-    var str string = ""
+    x:= 3
+    var str string
 
     if x > 3 {
          str = "Hi"
@@ -50,8 +50,21 @@ func main(){
  
     fmt.Println(num)
     hello()
-     }
+    
+loop()
+}
 
    func hello(){
      fmt.Println("Hello")
+}
+
+func loop(){
+    for i := 0;i<5; i++{
+    fmt.Print(i)
+      }
+
+    var fruits = [3] string {"Banana", "Apple", "Orange"}
+    for _,value := range fruits {
+        fmt.Println(value)
+    }
 }
