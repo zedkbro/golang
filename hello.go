@@ -1,40 +1,42 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
-func main() {
-    myFunction("hello", "world", "foo", "bar")
-    res,err := divide(12,3)
-    fmt.Printf("%v\n",res)
-    fmt.Printf("%v",err)
+func main(){
+    var firstName string = "Zinabu";
+    var lastName = "Kalayu"
+    fmt.Printf("%v\n", firstName)
+    fmt.Printf("%T\n ", lastName)
+    interns  := []string{"Zinabu", "Tsegay","Daniel"};
+    fmt.Println(interns)
 
-    result := make(chan int)
+    // slice literal
+    var mySlice = [5] int {}
+    var mySlice2 = interns[0:2]
 
-    // Start a new goroutine to perform a computation
-    go func() {
-        // Compute the result and send it to the channel
-        result <- computeResult()
-    }()
+    fmt.Println(mySlice2)
 
-    // Receive the result from the channel
-    finalResult := <-result
-    fmt.Println(finalResult)
+    x := 3
 
-    
-
-}
-func myFunction(arg1 string, args ...string) {
-    fmt.Println("Arg1:", arg1)
-    fmt.Println("Variadic args:", args)
-}
-
-
-func divide(a,b int) (int,error){
-    if b==0 {
-        return 0, errors.New("can't")
+    switch x {
+    case 1:
+        fmt.Println("One")
+    case 2:
+        fmt.Println("Two")
+    case 3:
+        fmt.Println("Three")
     }
-    return a/b, nil
+
+    var  num = 0
+    fmt.Println("Enter input")
+    fmt.Scanln(&num)
+
+    fmt.Println(num)
+    hello()
+     }
+
+   func hello(){
+     fmt.Println("Hello")
 }
