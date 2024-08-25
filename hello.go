@@ -4,6 +4,12 @@ import (
 	"fmt"
 )
 
+
+type Animal struct{
+    name string
+    Age int
+}
+
 func main(){
     var firstName string = "Zinabu";
     var lastName = "Kalayu"
@@ -27,7 +33,6 @@ func main(){
     fmt.Println(mySlice2)
     x:= 3
     var str string
-
     if x > 3 {
          str = "Hi"
     }else{
@@ -50,7 +55,6 @@ func main(){
  
     fmt.Println(num)
     hello()
-    
     loop()
 
     // Go map
@@ -58,12 +62,25 @@ func main(){
     // var map3 map[string] int; declaring a map - default value is nil
     var mapB = make(map[string] int)
 
-      mapB["Salary"] = 34000;
-
-
+    mapB["Salary"] = 34000;
     fmt.Println(mapA["Age"])
     fmt.Println(mapB)
     delete(mapB, "Salary")
+
+  
+
+    var person  Animal
+    var dog Animal
+
+    person.name = "Zinabu"
+    dog.name ="Tafro"
+    fmt.Println(person.name)
+    fmt.Println(dog.name)
+
+    animalFunc(person)
+
+    
+
 }
 
    func hello(){
@@ -74,9 +91,12 @@ func loop(){
     for i := 0;i<5; i++{
     fmt.Print(i)
       }
-
     var fruits = [3] string {"Banana", "Apple", "Orange"}
     for _,value := range fruits {
         fmt.Println(value)
     }
+}
+
+func animalFunc(infant Animal){
+    fmt.Println(infant.name)
 }
